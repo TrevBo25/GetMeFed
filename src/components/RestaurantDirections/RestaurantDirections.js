@@ -47,11 +47,9 @@ class RestaurantDirections extends Component{
     getPlaceIDs(){
         axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${this.props.lat},${this.props.long}&key=AIzaSyCP0aaxLXVh5E4162hP3hnNLs-Nxjz7lrc`)
         .then ( response => {
-            console.log('before')
             this.setState({
                 myPlaceID: response.data.results[0].place_id
             })
-            console.log('after')
         })
         axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${this.props.selectedBus.coordinates.latitude},${this.props.selectedBus.coordinates.longitude}&key=AIzaSyCP0aaxLXVh5E4162hP3hnNLs-Nxjz7lrc`)
         .then ( response => {

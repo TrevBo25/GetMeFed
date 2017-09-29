@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo:900");
+@import url("https://fonts.googleapis.com/css?family=Passion+One:700");
+a {
+  text-decoration: none; }
+
+.papa {
+  background-image: url("../../assets/cook-food-kitchen-eat-54455.jpeg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .papa .herobox {
+    width: 1000px;
+    height: 400px;
+    transform: translateY(-70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .papa .herobox .header {
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 130px; }
+    .papa .herobox .loginbutton {
+      color: #EFEDEF;
+      font-family: "Passion One", cursive;
+      background-color: #12540D;
+      border: none;
+      padding: 15px;
+      font-size: 30px;
+      border-radius: 15px;
+      text-decoration: none; }
+    .papa .herobox .loginbutton:hover {
+      background-color: #186610;
+      text-decoration: none; }

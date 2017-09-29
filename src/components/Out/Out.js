@@ -21,32 +21,18 @@ class Out extends Component{
   
     }
 
-
-    //term= a search term or terms
-    //location= an address of some sort OR latitude= lat&longitude= long
-    //price= number corresponding to $ or $$ or $$$ or $$$$
-    //radius=40000
-    //sort_by=best_match
-
-
-    //here
     componentDidMount(){
         this.getLocation();
     }
 
-
     getLocation(){
-
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(position => {
                 this.props.getLat(position.coords.latitude);
                 this.props.getLong(position.coords.longitude)
                 })
         }
-            
-        
     }
-    //to here can be removed for final build
 
     handleTerm(str){
         this.setState({
@@ -77,32 +63,18 @@ class Out extends Component{
     getRandomRestaurant(){
         this.props.getSelectedBusID( )
         let randomTermValue = this.props.randomTerm[Math.floor(Math.random() * (58 - 0 + 1)) + 0];
-        console.log(randomTermValue);
         let randomPriceValue = Math.floor(Math.random() * (3 - 1 + 1) + 1);
-        console.log(randomPriceValue)
         let rando = `term=${randomTermValue}&price=${randomPriceValue}&latitude=${this.props.lat}&longitude=${this.props.long}&radius=40000&sort_by=best_match`
         let randoID = "";
         axios.get(`http://localhost:3535/api/search/${rando}`)
         .then( response => {
-            let bb = response.data.businesses
-            console.log('rdb', bb)
-            let find = bb.length;
-            console.log('length', find)
-            let findNum = Math.floor(Math.random() * (find) - 0);
-            console.log('randomNum', findNum)
             randoID = response.data.businesses[Math.floor(Math.random() * (response.data.businesses.length) - 0)].id
-            console.log('randoID', randoID)
             this.props.getSelectedBusID(randoID)
-            console.log('props', this.props.selectedBusID)
         })
 
     }
-// ask why this code isn't sending to props in time? it should work from there
-
-
 
     render(){
-
         return(
             <div>
                 <h1>Out page</h1>

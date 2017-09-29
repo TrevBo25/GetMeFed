@@ -7,7 +7,6 @@ class Restaurants extends Component{
     constructor(props){
         super(props)
         this.state = {
-            selected: ""
         }
         this.selectRestaurant = this.selectRestaurant.bind(this);
     }
