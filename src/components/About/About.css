@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+a {
+  text-decoration: none; }
+
+.papaa {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/darkliquor.jpeg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .papaa .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .papaa .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .papaa .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .papaa .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .papaa .navbar .navlinksright a {
+        margin-right: 30px; }
+  .papaa .topholder {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #EFEDEF;
+    font-family: "Roboto", sans-serif; }
+    .papaa .topholder .toptext {
+      height: 200px;
+      width: 750px;
+      text-align: center;
+      font-size: 32px; }

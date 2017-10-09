@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Chivo:900");
-@import url("https://fonts.googleapis.com/css?family=Passion+One:700");
+@import url("https://fonts.googleapis.com/css?family=Chivo");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 a {
   text-decoration: none; }
 
@@ -30,13 +30,13 @@ a {
       font-size: 130px; }
     .papa .herobox .loginbutton {
       color: #EFEDEF;
-      font-family: "Passion One", cursive;
-      background-color: #12540D;
+      font-family: "Roboto", sans-serif;
+      background-color: #222022;
       border: none;
       padding: 15px;
       font-size: 30px;
-      border-radius: 15px;
+      border-radius: 5px;
       text-decoration: none; }
     .papa .herobox .loginbutton:hover {
-      background-color: #186610;
+      background: linear-gradient(to bottom, #222022 0%, #12540D 400%);
       text-decoration: none; }

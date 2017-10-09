@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+a {
+  text-decoration: none;
+  color: #EFEDEF; }
+
+.papard {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, white 0%, #EFEDEF 100%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .papard .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .papard .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .papard .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .papard .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .papard .navbar .navlinksright a {
+        margin-right: 30px; }
+  .papard .container {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 55px; }
+    .papard .container .leftstuff {
+      margin: 10px;
+      height: 100%;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      .papard .container .leftstuff .name {
+        width: 400px;
+        font-family: "Chivo", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .papard .container .leftstuff .name .resname {
+          font-size: 28px;
+          margin-top: 10px;
+          text-align: center; }
+        .papard .container .leftstuff .name .rating {
+          font-family: "Roboto", sans-serif;
+          font-size: 21px; }
+        .papard .container .leftstuff .name .numrev {
+          font-family: "Roboto", sans-serif;
+          font-size: 17px; }
+      .papard .container .leftstuff .resinfo {
+        width: 400px;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px; }
+        .papard .container .leftstuff .resinfo .leftinfo {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          font-family: "Roboto", sans-serif; }
+          .papard .container .leftstuff .resinfo .leftinfo .address {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; }
+            .papard .container .leftstuff .resinfo .leftinfo .address .adrtitle {
+              font-family: "Chivo", sans-serif;
+              font-size: 22px; }
+          .papard .container .leftstuff .resinfo .leftinfo .phone {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 10px; }
+            .papard .container .leftstuff .resinfo .leftinfo .phone .phonetitle {
+              font-family: "Chivo", sans-serif;
+              font-size: 22px; }
+        .papard .container .leftstuff .resinfo .rightinfo {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          font-family: "Roboto", sans-serif; }
+          .papard .container .leftstuff .resinfo .rightinfo .hours {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 15px; }
+            .papard .container .leftstuff .resinfo .rightinfo .hours .hourstitle {
+              font-family: "Chivo", sans-serif;
+              font-size: 22px; }
+      .papard .container .leftstuff .mapholder {
+        border: 1px #CECCCE solid;
+        margin-top: 15px; }
+    .papard .container .rightstuff {
+      margin-top: 10px;
+      height: 100%;
+      width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around; }
+      .papard .container .rightstuff .photos {
+        height: 380px;
+        width: 730px;
+        margin: 5px;
+        margin-top: 7px;
+        border: 1px #CECCCE solid; }
+        .papard .container .rightstuff .photos .pics {
+          height: 380px;
+          width: 730px; }
+      .papard .container .rightstuff .reviews {
+        height: 100%;
+        width: 730px;
+        font-family: "Roboto", sans-serif; }
+        .papard .container .rightstuff .reviews .reviewbartitle {
+          font-family: "Chivo", sans-serif;
+          font-size: 28px; }
+        .papard .container .rightstuff .reviews .revlist {
+          width: 750px;
+          height: 150px; }
+          .papard .container .rightstuff .reviews .revlist .revbox {
+            width: 750px;
+            height: 50px;
+            display: flex;
+            transform: translateY(-15px);
+            padding: 3px; }
+            .papard .container .rightstuff .reviews .revlist .revbox .revstuff {
+              flex: 9; }
+              .papard .container .rightstuff .reviews .revlist .revbox .revstuff .user {
+                font-size: 20px; }
+              .papard .container .rightstuff .reviews .revlist .revbox .revstuff .text {
+                font-size: 15px;
+                padding-left: 15px; }
+            .papard .container .rightstuff .reviews .revlist .revbox .revpic {
+              flex: 1; }
+              .papard .container .rightstuff .reviews .revlist .revbox .revpic .userimg {
+                height: 40px;
+                width: 40px;
+                border-radius: 100px; }

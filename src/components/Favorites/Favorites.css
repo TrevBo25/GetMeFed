@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+a {
+  text-decoration: none;
+  color: #EFEDEF; }
+
+.papaf {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, white 0%, #EFEDEF 100%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto; }
+  .papaf .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .papaf .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .papaf .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .papaf .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .papaf .navbar .navlinksright a {
+        margin-right: 30px; }
+  .papaf .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateY(110px); }
+    .papaf .container .cardholder {
+      width: 1000px;
+      height: 270px;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px;
+      border-radius: 5px; }
+      .papaf .container .cardholder .imgholder {
+        width: 400px;
+        height: 200px;
+        border-radius: 5px;
+        background-color: black; }
+        .papaf .container .cardholder .imgholder .imgimg {
+          height: 100%;
+          width: 100%;
+          border-radius: 5px; }
+      .papaf .container .cardholder .junk {
+        margin-right: 5px;
+        height: 240px;
+        width: 580px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .papaf .container .cardholder .junk .thisjunk {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          width: 450px;
+          height: 230px;
+          margin-left: 5px;
+          font-family: "Chivo", sans-serif; }
+          .papaf .container .cardholder .junk .thisjunk .title {
+            font-size: 35px; }
+          .papaf .container .cardholder .junk .thisjunk .notes .notestitle {
+            font-family: "Roboto", sans-serif; }
+          .papaf .container .cardholder .junk .thisjunk .notes .notesbox {
+            font-family: "Roboto", sans-serif;
+            font-size: 15px;
+            width: 400px; }
+        .papaf .container .cardholder .junk .thatjunk {
+          height: 230px;
+          width: 110px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-right: 5px; }
+          .papaf .container .cardholder .junk .thatjunk .deletebutton {
+            height: 70px;
+            width: 60px;
+            background-image: url("../../assets/deletelight.png");
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-position: center;
+            transform: translateY(20px); }
+          .papaf .container .cardholder .junk .thatjunk .deletebutton:hover {
+            background-image: url("../../assets/deletedark.png"); }
+          .papaf .container .cardholder .junk .thatjunk .submit {
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center; }
+            .papaf .container .cardholder .junk .thatjunk .submit .submitbutton {
+              font-family: "Chivo", sans-serif;
+              font-size: 25px;
+              padding: 3px;
+              border: 1px black solid;
+              border-radius: 5px; }
+            .papaf .container .cardholder .junk .thatjunk .submit .submitbutton:hover {
+              background-color: #CECCCE; }

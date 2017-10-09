@@ -1,8 +1,9 @@
-create table favorites(
+CREATE TABLE IF NOT EXISTS favorites(
     id SERIAL PRIMARY KEY,
     userid TEXT,
     type VARCHAR(20),
-    favoriteurl TEXT,
-    favoritename TEXT,
-    favoriteimg TEXT
+    code TEXT,
+    name TEXT,
+    img TEXT,
+    notes TEXT
 );

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Chivo');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$green-color: #12540D;
+$green-color-hover: #0E3D0A;
+$white-color: #EFEDEF;
+$black-color: #222022;
+$light-grey: #CECCCE;
+$dark-grey: #4C4947;
+$radio-selected: #00C95A;
+$primary-font: 'Chivo', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
+
+a{text-decoration: none; color: $white-color;}
+
+.paparec{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, white 0%, $white-color 100%);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .navbar{
+        width: 100%;
+        height: 60px;
+        background: linear-gradient(to bottom, $black-color 0%, $green-color 250%);
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        z-index: 9000;
+        .navhome{
+            height: 100%;
+            color: $white-color;
+            font-family: $primary-font;
+            display: flex;
+            font-size: 65px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .navlinks{
+            height: 100%;
+            width: 300px;
+            color: $white-color;
+            font-family: $primary-font;
+            font-size: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navlinksright{
+            height: 100%;
+            color: $white-color;
+            font-family: $primary-font;
+            display: flex;
+            font-size: 25px;
+            justify-content: flex-end;
+            align-items: center;
+            a{
+                margin-right: 30px;
+            }
+        }
+    }
+    .container{
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        top: 55px;
+        width: 100%;
+        .leftstuff{
+            margin: 10px;
+            height: 100%;
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            .name{
+                width: 400px;
+                font-family: $primary-font;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .recname{
+                    font-size: 28px;
+                    margin-top: 10px;
+                    text-align: center;
+                }
+                .rating{
+                    font-family: $secondary-font;
+                    font-size: 21px;
+                }
+            }
+        }
+        .rightstuff{
+            margin-top: 10px;
+            height: 100%;
+            width: 66%;
+            .fluidmedia{
+                position: relative;
+                padding-bottom: 67%;
+                padding-top: 30px;
+                height: 0;
+                overflow: hidden;
+                iframe{
+                    position: absolute;
+                    top: 0; 
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

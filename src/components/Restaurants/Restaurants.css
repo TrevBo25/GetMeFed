@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+a {
+  text-decoration: none;
+  color: #EFEDEF; }
+
+.paparests {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, white 0%, #EFEDEF 100%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1.5s ease all; }
+  .paparests .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .paparests .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .paparests .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .paparests .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .paparests .navbar .navlinksright a {
+        margin-right: 30px; }
+  .paparests .content {
+    height: 91%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateY(30px);
+    overflow: auto; }
+    .paparests .content .cardholder {
+      width: 400px;
+      height: 500px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      border-radius: 5px; }
+      .paparests .content .cardholder .busimg {
+        width: 400px;
+        height: 310px;
+        border-radius: 5px; }
+        .paparests .content .cardholder .busimg .imgimg {
+          height: 100%;
+          width: 100%;
+          border-radius: 5px 5px 0px 0px; }
+      .paparests .content .cardholder .cards {
+        width: 400px;
+        height: 190px;
+        background-color: white;
+        color: black;
+        font-family: "Chivo", sans-serif;
+        text-align: center;
+        border-radius: 5px; }
+        .paparests .content .cardholder .cards .cardtitle {
+          text-align: center;
+          font-size: 25px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          color: black; }
+        .paparests .content .cardholder .cards .junk {
+          height: 120px;
+          font-family: "Roboto", sans-serif;
+          display: flex;
+          justify-content: space-around; }
+          .paparests .content .cardholder .cards .junk .junkleft {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            color: black; }
+            .paparests .content .cardholder .cards .junk .junkleft .rating {
+              font-size: 18px;
+              transform: translateY(10px); }
+              .paparests .content .cardholder .cards .junk .junkleft .rating .rat {
+                margin-bottom: 4px;
+                font-size: 20px; }
+              .paparests .content .cardholder .cards .junk .junkleft .rating .rev {
+                font-size: 16px;
+                color: black; }
+              .paparests .content .cardholder .cards .junk .junkleft .rating .rev:hover {
+                color: #4C4947; }
+            .paparests .content .cardholder .cards .junk .junkleft .open {
+              font-size: 19px; }
+          .paparests .content .cardholder .cards .junk .junkright {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center; }
+            .paparests .content .cardholder .cards .junk .junkright .address {
+              font-size: 20px;
+              transform: translateY(10px); }
+            .paparests .content .cardholder .cards .junk .junkright .gobutton {
+              height: 20px;
+              padding: 5px;
+              color: black;
+              width: 100;
+              border: 1px black solid;
+              border-radius: 5px;
+              font-size: 18px; }
+            .paparests .content .cardholder .cards .junk .junkright .gobutton:hover {
+              background-color: #CECCCE; }

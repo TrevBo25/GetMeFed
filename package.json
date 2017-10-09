@@ -1,6 +1,7 @@
 {
   "name": "getmefed",
   "version": "0.1.0",
+  "proxy": "http://localhost:3535",
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
@@ -11,16 +12,25 @@
     "express-session": "^1.15.5",
     "massive": "^4.2.0",
     "node-sass-chokidar": "0.0.3",
+    "nuka-carousel": "^2.3.0",
     "oauth-provider": "^1.0.7",
     "passport": "^0.4.0",
     "passport-auth0": "^0.6.0",
     "react": "^15.6.1",
+    "react-autosize-textarea": "^0.4.9",
     "react-dom": "^15.6.1",
     "react-google-maps": "^8.3.0",
+    "react-motion": "^0.5.1",
+    "react-native-autogrow-textinput": "^4.1.0",
     "react-redux": "^5.0.6",
+    "react-responsive-carousel": "^3.1.27",
     "react-router-dom": "^4.2.2",
+    "react-router-page-transition": "^3.0.2",
     "react-scripts": "1.0.13",
-    "redux": "^3.7.2"
+    "react-slick": "^0.15.4",
+    "redux": "^3.7.2",
+    "throttle-debounce": "^1.0.1",
+    "underscore": "^1.8.3"
   },
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",

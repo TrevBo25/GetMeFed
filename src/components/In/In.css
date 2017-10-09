@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+a {
+  text-decoration: none;
+  color: #EFEDEF; }
+
+.papai {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/incooking.jpeg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .papai .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .papai .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .papai .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .papai .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .papai .navbar .navlinksright a {
+        margin-right: 30px; }
+  .papai .container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; }
+    .papai .container .intitle {
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 35px;
+      transform: translateY(20px);
+      text-align: center; }
+    .papai .container .money {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-120px); }
+      .papai .container .money .thisone {
+        display: flex;
+        flex-direction: row; }
+        .papai .container .money .thisone .input {
+          height: 35px;
+          width: 690px;
+          padding: 10px;
+          font-family: "Roboto", sans-serif;
+          color: #EFEDEF;
+          font-size: 20px;
+          border-radius: 5px 5px 0px 0px;
+          border: none;
+          border-bottom: 2px black solid;
+          color: black; }
+        .papai .container .money .thisone .input::-webkit-input-placeholder {
+          color: #EFEDEF; }
+      .papai .container .money .randomholder {
+        display: flex;
+        height: 50px;
+        width: 710px;
+        font-family: "Roboto", sans-serif;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        background-color: white;
+        border-radius: 0px 0px 5px 5px; }
+        .papai .container .money .randomholder .randobutton {
+          width: calc(660px / 5);
+          background-color: white;
+          height: 40px;
+          font-size: 20px;
+          text-align: center;
+          flex: 1;
+          padding: 5px;
+          color: black; }
+        .papai .container .money .randomholder .randobutton:hover {
+          background-color: #CECCCE; }
+        .papai .container .money .randomholder .bfast {
+          border-radius: 0px 0px 0px 5px; }
+        .papai .container .money .randomholder .drinks {
+          border-radius: 0px 0px 5px 0px; }

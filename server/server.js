@@ -5,16 +5,22 @@ const express = require('express'),
       session = require('express-session'),
       passport = require('passport'),
       Auth0Strategy = require('passport-auth0'),
-      axios = require('axios')
-      cors = require('cors');
+      axios = require('axios'),
+      cors = require('cors')
+      controller = require('./controller');
 
 const app = express();
 app.use(cors());
 app.use(session({
     secret: process.env.SECRET,
     resave:false,
-    saveUninitialized:true
+    saveUninitialized:true,
+    cookie: {
+        secure: false
+    }
 }));
+
+app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -30,15 +36,18 @@ passport.use(new Auth0Strategy({
     clientSecret: process.env.AUTH_CLIENT_SECRET,
     callbackURL: process.env.AUTH_CALLBACK
 }, function(accessToken, refreshToken, extraParams, profile, done){
-    //database
     usefulID = profile.identities[0].user_id.toString()
     const db = app.get('db');
     db.get_user([profile.identities[0].user_id]).then(user => {
+        
         if (user[0]){
+            console.log('if user exists', user)
+            
             done(null, user[0].id)
         } else {
             db.create_user([profile.displayName, profile.emails[0].value, profile.picture, profile.identities[0].user_id])
             .then(user => {
+                console.log('new user', user)
                 done(null, user[0].id)
             })
         }
@@ -46,9 +55,12 @@ passport.use(new Auth0Strategy({
 }))
 
 passport.serializeUser(function(userID, done){
+    console.log('serialize', userID)
     done(null, userID);
 })
+
 passport.deserializeUser(function(userID, done){
+    console.log('deser', userID)
     app.get('db').current_user([userID]).then(user => {
         done(null, user[0])
     })
@@ -61,14 +73,16 @@ app.get('/auth/callback', passport.authenticate('auth0',{
     failureRedirect: '/auth'
 }))
 
-app.get('/auth/user', (req, res, next) => {
+app.get('/auth/user', passport.authenticate("auth0"), (req, res, next) => {
+    console.log(req.session)
     if (!req.user){
         return res.status(404).send('User not found');
     } else {
         return res.status(200).send(req.user);
     }
-
 })
+
+
 
 app.get('/auth/logout', (req, res) => {
     req.logOut();
@@ -88,6 +102,21 @@ app.get('/api/business/:thing',(req, res) => {
         res.status(200).json(response.data)
     }).catch(err => console.log(err))
 })
+
+app.get('/api/reviews/:thang',(req, res) => {
+    axios.get(`https://api.yelp.com/v3/businesses/${req.params.thang}/reviews`,{'headers': {'Authorization':process.env.ACCESS_TOKEN}})
+    .then(response => {
+        res.status(200).json(response.data)
+    }).catch(err => console.log(err))
+})
+
+app.post('/api/postfave',controller.postFave);
+app.get('/api/getfaves',controller.getFaves);
+app.get('/api/getfavesrec',controller.getFavesRec);
+app.get('/api/getfavesres',controller.getFavesRes);
+app.delete('/api/deletefave',controller.deleteFave);
+app.post('/api/editnote', controller.editNote);
+
 
 const PORT = 3535;
 app.listen(PORT, () => console.log('listening on port: ', PORT));

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Chivo:900');
-@import url('https://fonts.googleapis.com/css?family=Passion+One:700');
+@import url('https://fonts.googleapis.com/css?family=Chivo');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 $green-color: #12540D;
 $white-color: #EFEDEF;
@@ -7,8 +7,7 @@ $black-color: #222022;
 $light-grey: #CECCCE;
 $dark-grey: #4C4947;
 $primary-font: 'Chivo', sans-serif;
-$secondary-font: 'Passion One', cursive;
-
+$secondary-font: 'Roboto', sans-serif;
 a{text-decoration: none}
 
 .papa{
@@ -40,15 +39,15 @@ a{text-decoration: none}
         .loginbutton{
             color: $white-color;
             font-family: $secondary-font;
-            background-color: $green-color;
+            background-color: $black-color;
             border: none;
             padding: 15px;
             font-size: 30px;
-            border-radius: 15px;
+            border-radius: 5px;
             text-decoration: none;
         }
         .loginbutton:hover{
-            background-color: #186610;
+            background: linear-gradient(to bottom, $black-color 0%, $green-color 400%);
             text-decoration: none;
         }
     }

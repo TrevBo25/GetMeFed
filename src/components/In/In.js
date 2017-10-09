@@ -3,12 +3,14 @@ import './In.css';
 import {connect} from 'react-redux';
 import axios from 'axios';
 import {getLat, getLong, getRecipes, getSelectedRecipeID} from '../../ducks/reducer';
+import {Redirect} from 'react-router-dom';
 
 class In extends Component{
     constructor(props){
         super(props)
         this.state = {
-            term: ''
+            term: '',
+            submitted: false
         }
 
         this.getLocation=this.getLocation.bind(this);
@@ -19,9 +21,8 @@ class In extends Component{
         this.getRandomDinner=this.getRandomDinner.bind(this);
         this.getRandomDessert=this.getRandomDessert.bind(this);
         this.getRandomDrink=this.getRandomDrink.bind(this);
+        this.handleKeyPress=this.handleKeyPress.bind(this);
     }
-
-
 
     componentDidMount(){
         this.getLocation();
@@ -29,15 +30,12 @@ class In extends Component{
 
 
     getLocation(){
-
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(position => {
                 this.props.getLat(position.coords.latitude);
                 this.props.getLong(position.coords.longitude)
                 })
         }
-            
-        
     }
 
     handleTerm(str){
@@ -49,8 +47,10 @@ class In extends Component{
     searchRecipes(){
         axios.get(`http://food2fork.com/api/search?key=6567b231491290ae92e3a731730b6723&q=${this.state.term}`)
         .then( response => {
-            this.props.getRecipes(response.data.recipes)
-            console.log(response.data.recipes)
+            this.props.getRecipes(response.data.recipes);
+            this.setState({
+                submitted: true
+            }) 
         }).catch(err => console.log(err))
     }
     
@@ -103,27 +103,54 @@ class In extends Component{
             this.props.getSelectedRecipeID(randRec)
         }).catch(err => console.log(err))
     }
+    
+    handleKeyPress(target) {
+        if(target.charCode==13){
+            this.searchRecipes();  
+        }
+    }
 
 
     render(){
+
+        if (this.state.submitted) {
+            return (
+              <Redirect to="/recipes"/>
+            )
+        }
+
         return(
             <div>
-                <h1>In Page</h1>
-                <input onChange={e => {
-                    this.handleTerm(e.target.value)
-                }} />
-                <br />
-                <a href="/#/recipes"><button onClick={this.searchRecipes}>GET DEEZ REEZZIIPPEEZZ</button></a>
-                <br />
-                <a href="/#/recipe"><button onClick={this.getRandomBreakfast}>Breakfast</button></a>
-                <br />
-                <a href="/#/recipe"><button onClick={this.getRandomLunch}>Lunch</button></a>
-                <br />
-                <a href="/#/recipe"><button onClick={this.getRandomDinner}>Dinner</button></a>
-                <br />
-                <a href="/#/recipe"><button onClick={this.getRandomDessert}>Dessert</button></a>
-                <br />
-                <a href="/#/recipe"><button onClick={this.getRandomDrink}>Drink</button></a>
+                <div className="papai">
+                    <div className="navbar">
+                        <a href="/#/home"><div className="navhome"><h1>G</h1></div></a>
+                        <div className="navlinks">
+                            <a href="/#/out"><div>Eat Out</div></a>
+                            <a href="/#/in"><div>Eat In</div></a>
+                            <a href="/#/favorites"><div>Favorites</div></a>
+                        </div>
+                        <div className="navlinksright">
+                            <a href="/#/about"><div>About</div></a>
+                        </div>
+                    </div>
+                    <div className="container">
+                        <h1 className="intitle">I hope you're better at cooking than you are at making decisions.</h1>
+                        <div className="money">
+                            <div className="thisone">
+                                <input onChange={e => {
+                                    this.handleTerm(e.target.value)
+                                    }} className="input" placeholder="What are you feelin' ..." onKeyPress={this.handleKeyPress} />
+                            </div>
+                            <div className="randomholder">
+                            <a href="/#/recipe"><div onClick={this.getRandomBreakfast} className="randobutton bfast">Random<br/>Breakfast</div></a>
+                            <a href="/#/recipe"><div onClick={this.getRandomLunch} className="randobutton">Random<br/>Lunch</div></a>
+                            <a href="/#/recipe"><div onClick={this.getRandomDinner} className="randobutton">Random<br/>Dinner</div></a>
+                            <a href="/#/recipe"><div onClick={this.getRandomDessert} className="randobutton">Random<br/>Dessert</div></a>
+                            <a href="/#/recipe"><div onClick={this.getRandomDrink} className="randobutton drinks">Random<br/>Drink</div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

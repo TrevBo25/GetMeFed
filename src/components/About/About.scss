@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Chivo');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$green-color: #12540D;
+$white-color: #EFEDEF;
+$black-color: #222022;
+$light-grey: #CECCCE;
+$dark-grey: #4C4947;
+$primary-font: 'Chivo', sans-serif;
+$secondary-font: 'Roboto', sans-serif;
+
+a{text-decoration: none}
+
+.papaa{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/darkliquor.jpeg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .navbar{
+        width: 100%;
+        height: 60px;
+        background: linear-gradient(to bottom, $black-color 0%, $green-color 250%);
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        z-index: 9000;
+        .navhome{
+            height: 100%;
+            color: $white-color;
+            font-family: $primary-font;
+            display: flex;
+            font-size: 65px;
+            justify-content: center;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .navlinks{
+            height: 100%;
+            width: 300px;
+            color: $white-color;
+            font-family: $primary-font;
+            font-size: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navlinksright{
+            height: 100%;
+            color: $white-color;
+            font-family: $primary-font;
+            display: flex;
+            font-size: 25px;
+            justify-content: flex-end;
+            align-items: center;
+            a{
+                margin-right: 30px;
+            }
+        }
+    }
+    .topholder{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: $white-color;
+        font-family: $secondary-font;
+        .toptext{
+            height: 200px;
+            width: 750px;
+            text-align: center;
+            font-size: 32px;
+        }
+    }
+}

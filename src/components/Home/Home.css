@@ -1,0 +1,605 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+a {
+  text-decoration: none;
+  color: #EFEDEF; }
+
+.papah {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/steakphoto.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  transition: all 2s ease; }
+  .papah .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .papah .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .papah .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .papah .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .papah .navbar .navlinksright a {
+        margin-right: 30px; }
+  .papah .topholder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #EFEDEF;
+    font-family: "Roboto", sans-serif; }
+    .papah .topholder .toptext {
+      height: 200px;
+      width: 750px;
+      text-align: center;
+      font-size: 32px; }
+
+.papahgo {
+  transform: translateY(-15vh); }
+
+.maincard {
+  top: 100vh;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/grill.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  z-index: 2;
+  transition: all 2s ease; }
+  .maincard .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .maincard .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .maincard .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .maincard .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .maincard .navbar .navlinksright a {
+        margin-right: 30px; }
+  .maincard .maincardcontent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1; }
+    .maincard .maincardcontent .mainwords {
+      width: 70%;
+      color: #EFEDEF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 30px; }
+      .maincard .maincardcontent .mainwords .maincardtitle {
+        font-size: 45px;
+        font-family: "Chivo", sans-serif; }
+      .maincard .maincardcontent .mainwords .inbutton {
+        height: 60px;
+        width: 300px;
+        background-color: #222022;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px; }
+        .maincard .maincardcontent .mainwords .inbutton .arrow {
+          background: url("../../assets/goodarrow.png");
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          background-position: center;
+          height: 60px;
+          width: 62px; }
+
+.maincardshow {
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/grill.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  z-index: 2;
+  transition: all 2s ease; }
+  .maincardshow .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .maincardshow .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .maincardshow .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .maincardshow .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .maincardshow .navbar .navlinksright a {
+        margin-right: 30px; }
+  .maincardshow .maincardcontent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1; }
+    .maincardshow .maincardcontent .mainwords {
+      width: 70%;
+      color: #EFEDEF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 30px; }
+      .maincardshow .maincardcontent .mainwords .maincardtitle {
+        font-size: 45px;
+        font-family: "Chivo", sans-serif; }
+      .maincardshow .maincardcontent .mainwords .inbutton {
+        height: 60px;
+        width: 300px;
+        background-color: #222022;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px; }
+        .maincardshow .maincardcontent .mainwords .inbutton .arrow {
+          background: url("../../assets/goodarrow.png");
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          background-position: center;
+          height: 60px;
+          width: 62px; }
+      .maincardshow .maincardcontent .mainwords .inbutton:hover {
+        background: linear-gradient(to bottom, #222022 0%, #12540D 400%);
+        text-decoration: none; }
+
+.maincardgo {
+  top: -15vh;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/grill.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  z-index: 1;
+  transition: all 2s ease; }
+  .maincardgo .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .maincardgo .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .maincardgo .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .maincardgo .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .maincardgo .navbar .navlinksright a {
+        margin-right: 30px; }
+  .maincardgo .maincardcontent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1; }
+    .maincardgo .maincardcontent .mainwords {
+      width: 70%;
+      color: #EFEDEF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 30px; }
+      .maincardgo .maincardcontent .mainwords .maincardtitle {
+        font-size: 45px;
+        font-family: "Chivo", sans-serif; }
+      .maincardgo .maincardcontent .mainwords .inbutton {
+        height: 60px;
+        width: 300px;
+        background-color: #222022;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px; }
+        .maincardgo .maincardcontent .mainwords .inbutton .arrow {
+          background: url("../../assets/goodarrow.png");
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          background-position: center;
+          height: 60px;
+          width: 62px; }
+
+.secondcard {
+  top: 100vh;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/restaurantgood.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  z-index: 2;
+  transition: all 2s ease; }
+  .secondcard .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .secondcard .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .secondcard .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .secondcard .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .secondcard .navbar .navlinksright a {
+        margin-right: 30px; }
+  .secondcard .secondcardcontent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1; }
+    .secondcard .secondcardcontent .secondwords {
+      width: 70%;
+      color: #EFEDEF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 30px; }
+      .secondcard .secondcardcontent .secondwords .secondcardtitle {
+        font-size: 45px;
+        font-family: "Chivo", sans-serif; }
+      .secondcard .secondcardcontent .secondwords .outbutton {
+        height: 60px;
+        width: 300px;
+        background-color: #222022;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px; }
+        .secondcard .secondcardcontent .secondwords .outbutton .arrow {
+          background: url("../../assets/goodarrowout.png");
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          background-position: center;
+          height: 60px;
+          width: 62px; }
+
+.secondcardshow {
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/restaurantgood.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  z-index: 2;
+  transition: all 2s ease; }
+  .secondcardshow .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .secondcardshow .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .secondcardshow .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .secondcardshow .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .secondcardshow .navbar .navlinksright a {
+        margin-right: 30px; }
+  .secondcardshow .secondcardcontent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1; }
+    .secondcardshow .secondcardcontent .secondwords {
+      width: 70%;
+      color: #EFEDEF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 30px; }
+      .secondcardshow .secondcardcontent .secondwords .secondcardtitle {
+        font-size: 45px;
+        font-family: "Chivo", sans-serif; }
+      .secondcardshow .secondcardcontent .secondwords .outbutton {
+        height: 60px;
+        width: 300px;
+        background-color: #222022;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px; }
+        .secondcardshow .secondcardcontent .secondwords .outbutton .arrow {
+          background: url("../../assets/goodarrowout.png");
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          background-position: center;
+          height: 60px;
+          width: 62px; }
+      .secondcardshow .secondcardcontent .secondwords .outbutton:hover {
+        background: linear-gradient(to bottom, #222022 0%, #12540D 400%);
+        text-decoration: none; }
+
+.secondcardgo {
+  top: -15vh;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/restaurantgood.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  z-index: 2;
+  transition: all 2s ease; }
+  .secondcardgo .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .secondcardgo .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .secondcardgo .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .secondcardgo .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .secondcardgo .navbar .navlinksright a {
+        margin-right: 30px; }
+  .secondcardgo .secondcardcontent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1; }
+    .secondcardgo .secondcardcontent .secondwords {
+      width: 70%;
+      color: #EFEDEF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 30px; }
+      .secondcardgo .secondcardcontent .secondwords .secondcardtitle {
+        font-size: 45px;
+        font-family: "Chivo", sans-serif; }
+      .secondcardgo .secondcardcontent .secondwords .outbutton {
+        height: 60px;
+        width: 300px;
+        background-color: #222022;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 10px; }
+        .secondcardgo .secondcardcontent .secondwords .outbutton .arrow {
+          background: url("../../assets/goodarrowout.png");
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+          background-position: center;
+          height: 60px;
+          width: 62px; }

@@ -8,6 +8,8 @@ import RestaurantDirections from './components/RestaurantDirections/RestaurantDi
 import In from './components/In/In';
 import Recipes from './components/Recipes/Recipes';
 import Recipe from './components/Recipe/Recipe';
+import About from './components/About/About';
+import Favorites from './components/Favorites/Favorites'
 
 export default (
     <Switch>
@@ -15,9 +17,11 @@ export default (
         <Route path="/home" component={Home} />
         <Route path="/out" component={Out} />
         <Route path="/restaurants" component={Restaurants} />
-        <Route path="/restaurantdirections" component={RestaurantDirections} />
+        <Route path="/restaurantdirections/:id" component={RestaurantDirections} />
         <Route path="/in" component={In} />
         <Route path="/recipes" component={Recipes} />
-        <Route path="/recipe" component={Recipe} />
+        <Route path="/recipe/:id" component={Recipe} />
+        <Route path="/about" component={About} />
+        <Route path="/favorites" component={Favorites} />
     </Switch>
 )

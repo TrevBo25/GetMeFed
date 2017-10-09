@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+a {
+  text-decoration: none;
+  color: #EFEDEF; }
+
+.paparec {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, white 0%, #EFEDEF 100%);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .paparec .navbar {
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 9000; }
+    .paparec .navbar .navhome {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 65px;
+      justify-content: center;
+      align-items: center;
+      margin-left: 20px; }
+    .paparec .navbar .navlinks {
+      height: 100%;
+      width: 300px;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .paparec .navbar .navlinksright {
+      height: 100%;
+      color: #EFEDEF;
+      font-family: "Chivo", sans-serif;
+      display: flex;
+      font-size: 25px;
+      justify-content: flex-end;
+      align-items: center; }
+      .paparec .navbar .navlinksright a {
+        margin-right: 30px; }
+  .paparec .container {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 55px;
+    width: 100%; }
+    .paparec .container .leftstuff {
+      margin: 10px;
+      height: 100%;
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      .paparec .container .leftstuff .name {
+        width: 400px;
+        font-family: "Chivo", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .paparec .container .leftstuff .name .recname {
+          font-size: 28px;
+          margin-top: 10px;
+          text-align: center; }
+        .paparec .container .leftstuff .name .rating {
+          font-family: "Roboto", sans-serif;
+          font-size: 21px; }
+    .paparec .container .rightstuff {
+      margin-top: 10px;
+      height: 100%;
+      width: 66%; }
+      .paparec .container .rightstuff .fluidmedia {
+        position: relative;
+        padding-bottom: 67%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden; }
+        .paparec .container .rightstuff .fluidmedia iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; }
