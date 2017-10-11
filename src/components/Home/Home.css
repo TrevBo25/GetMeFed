@@ -4,10 +4,56 @@ a {
   text-decoration: none;
   color: #EFEDEF; }
 
+a:hover {
+  color: #CECCCE; }
+
+.g:hover {
+  color: #CECCCE; }
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 9000; }
+  .navbar .navhome {
+    height: 100%;
+    color: #EFEDEF;
+    font-family: "Chivo", sans-serif;
+    display: flex;
+    font-size: 65px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px; }
+  .navbar .navlinks {
+    height: 100%;
+    width: 300px;
+    color: #EFEDEF;
+    font-family: "Chivo", sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: calc(50% - 150px); }
+  .navbar .navlinksright {
+    height: 100%;
+    color: #EFEDEF;
+    font-family: "Chivo", sans-serif;
+    display: flex;
+    font-size: 25px;
+    justify-content: flex-end;
+    align-items: center; }
+    .navbar .navlinksright a {
+      margin-right: 30px; }
+
 .papah {
   width: 100%;
   height: 100vh;
-  background-image: url("../../assets/steakphoto.jpg");
+  background-image: url("../../assets/pizza2.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -17,52 +63,9 @@ a {
   justify-content: center;
   align-items: center;
   top: 0;
-  transition: all 2s ease; }
-  .papah .navbar {
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 9000; }
-    .papah .navbar .navhome {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 65px;
-      justify-content: center;
-      align-items: center;
-      margin-left: 20px; }
-    .papah .navbar .navhome:hover {
-      color: #CECCCE; }
-    .papah .navbar .navlinks {
-      height: 100%;
-      width: 300px;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      font-size: 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: absolute;
-      right: calc(50% - 150px); }
-      .papah .navbar .navlinks a:hover {
-        color: #CECCCE; }
-    .papah .navbar .navlinksright {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 25px;
-      justify-content: flex-end;
-      align-items: center; }
-      .papah .navbar .navlinksright a {
-        margin-right: 30px; }
-      .papah .navbar .navlinksright a:hover {
-        color: #CECCCE; }
+  transition: all 2s ease;
+  z-index: 1;
+  position: fixed; }
   .papah .topholder {
     display: flex;
     align-items: center;
@@ -79,7 +82,33 @@ a {
   transform: translateY(-15vh); }
 
 .papahhide {
-  transform: translateY(100vh); }
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/pizza2.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  transition: all 2s ease;
+  transform: translateY(100vh);
+  z-index: 1;
+  position: fixed; }
+  .papahhide .topholder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #EFEDEF;
+    font-family: "Roboto", sans-serif; }
+    .papahhide .topholder .toptext {
+      height: 200px;
+      width: 750px;
+      text-align: center;
+      font-size: 32px; }
 
 .maincard {
   top: 100vh;
@@ -94,45 +123,6 @@ a {
   position: fixed;
   z-index: 2;
   transition: all 2s ease; }
-  .maincard .navbar {
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 9000; }
-    .maincard .navbar .navhome {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 65px;
-      justify-content: center;
-      align-items: center;
-      margin-left: 20px; }
-    .maincard .navbar .navlinks {
-      height: 100%;
-      width: 300px;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      font-size: 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: absolute;
-      right: calc(50% - 150px); }
-    .maincard .navbar .navlinksright {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 25px;
-      justify-content: flex-end;
-      align-items: center; }
-      .maincard .navbar .navlinksright a {
-        margin-right: 30px; }
   .maincard .maincardcontent {
     height: 100%;
     width: 100%;
@@ -184,45 +174,6 @@ a {
   position: fixed;
   z-index: 2;
   transition: all 2s ease; }
-  .maincardshow .navbar {
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 9000; }
-    .maincardshow .navbar .navhome {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 65px;
-      justify-content: center;
-      align-items: center;
-      margin-left: 20px; }
-    .maincardshow .navbar .navlinks {
-      height: 100%;
-      width: 300px;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      font-size: 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: absolute;
-      right: calc(50% - 150px); }
-    .maincardshow .navbar .navlinksright {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 25px;
-      justify-content: flex-end;
-      align-items: center; }
-      .maincardshow .navbar .navlinksright a {
-        margin-right: 30px; }
   .maincardshow .maincardcontent {
     height: 100%;
     width: 100%;
@@ -275,47 +226,8 @@ a {
   background-size: cover;
   background-position: center;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   transition: all 2s ease; }
-  .maincardgo .navbar {
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 9000; }
-    .maincardgo .navbar .navhome {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 65px;
-      justify-content: center;
-      align-items: center;
-      margin-left: 20px; }
-    .maincardgo .navbar .navlinks {
-      height: 100%;
-      width: 300px;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      font-size: 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: absolute;
-      right: calc(50% - 150px); }
-    .maincardgo .navbar .navlinksright {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 25px;
-      justify-content: flex-end;
-      align-items: center; }
-      .maincardgo .navbar .navlinksright a {
-        margin-right: 30px; }
   .maincardgo .maincardcontent {
     height: 100%;
     width: 100%;
@@ -365,47 +277,8 @@ a {
   background-size: cover;
   background-position: center;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   transition: all 2s ease; }
-  .secondcard .navbar {
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 9000; }
-    .secondcard .navbar .navhome {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 65px;
-      justify-content: center;
-      align-items: center;
-      margin-left: 20px; }
-    .secondcard .navbar .navlinks {
-      height: 100%;
-      width: 300px;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      font-size: 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: absolute;
-      right: calc(50% - 150px); }
-    .secondcard .navbar .navlinksright {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 25px;
-      justify-content: flex-end;
-      align-items: center; }
-      .secondcard .navbar .navlinksright a {
-        margin-right: 30px; }
   .secondcard .secondcardcontent {
     height: 100%;
     width: 100%;
@@ -455,47 +328,8 @@ a {
   background-size: cover;
   background-position: center;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   transition: all 2s ease; }
-  .secondcardshow .navbar {
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 9000; }
-    .secondcardshow .navbar .navhome {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 65px;
-      justify-content: center;
-      align-items: center;
-      margin-left: 20px; }
-    .secondcardshow .navbar .navlinks {
-      height: 100%;
-      width: 300px;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      font-size: 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: absolute;
-      right: calc(50% - 150px); }
-    .secondcardshow .navbar .navlinksright {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 25px;
-      justify-content: flex-end;
-      align-items: center; }
-      .secondcardshow .navbar .navlinksright a {
-        margin-right: 30px; }
   .secondcardshow .secondcardcontent {
     height: 100%;
     width: 100%;
@@ -548,47 +382,8 @@ a {
   background-size: cover;
   background-position: center;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   transition: all 2s ease; }
-  .secondcardgo .navbar {
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(to bottom, #222022 0%, #12540D 250%);
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    z-index: 9000; }
-    .secondcardgo .navbar .navhome {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 65px;
-      justify-content: center;
-      align-items: center;
-      margin-left: 20px; }
-    .secondcardgo .navbar .navlinks {
-      height: 100%;
-      width: 300px;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      font-size: 25px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: absolute;
-      right: calc(50% - 150px); }
-    .secondcardgo .navbar .navlinksright {
-      height: 100%;
-      color: #EFEDEF;
-      font-family: "Chivo", sans-serif;
-      display: flex;
-      font-size: 25px;
-      justify-content: flex-end;
-      align-items: center; }
-      .secondcardgo .navbar .navlinksright a {
-        margin-right: 30px; }
   .secondcardgo .secondcardcontent {
     height: 100%;
     width: 100%;
@@ -626,3 +421,18 @@ a {
           background-position: center;
           height: 60px;
           width: 62px; }
+
+.topcardshow {
+  top: 0px;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/steakphoto.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  transition: all 2s ease; }
+
+.topcardgo {
+  transform: translateY(-15vh); }
