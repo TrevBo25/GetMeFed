@@ -34,6 +34,8 @@ a {
       justify-content: center;
       align-items: center;
       margin-left: 20px; }
+    .paparec .navbar .navhome:hover {
+      color: #CECCCE; }
     .paparec .navbar .navlinks {
       height: 100%;
       width: 300px;
@@ -42,7 +44,11 @@ a {
       font-size: 25px;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      position: absolute;
+      right: calc(50% - 150px); }
+      .paparec .navbar .navlinks a:hover {
+        color: #CECCCE; }
     .paparec .navbar .navlinksright {
       height: 100%;
       color: #EFEDEF;
@@ -53,6 +59,8 @@ a {
       align-items: center; }
       .paparec .navbar .navlinksright a {
         margin-right: 30px; }
+      .paparec .navbar .navlinksright a:hover {
+        color: #CECCCE; }
   .paparec .container {
     display: flex;
     justify-content: space-around;
@@ -80,6 +88,47 @@ a {
         .paparec .container .leftstuff .name .rating {
           font-family: "Roboto", sans-serif;
           font-size: 21px; }
+      .paparec .container .leftstuff .ing {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        flex-wrap: wrap; }
+        .paparec .container .leftstuff .ing .favbutton {
+          position: absolute;
+          top: 0;
+          right: 0;
+          font-family: "Roboto", sans-serif;
+          border: 2px black solid;
+          padding: 5px;
+          border-radius: 5px; }
+        .paparec .container .leftstuff .ing .favbutton:hover {
+          background-color: #CECCCE;
+          cursor: pointer; }
+        .paparec .container .leftstuff .ing .ingtitle {
+          font-family: "Roboto", sans-serif;
+          font-size: 25px;
+          margin-bottom: 10px; }
+        .paparec .container .leftstuff .ing .inglist {
+          font-family: "Chivo", sans-serif;
+          overflow: auto; }
+          .paparec .container .leftstuff .ing .inglist .ingitem {
+            font-size: 17px;
+            text-decoration: initial;
+            margin: 2px;
+            list-style-type: circle; }
+        .paparec .container .leftstuff .ing .sendbutton {
+          margin-top: 5px;
+          font-family: "Roboto", sans-serif;
+          border: 2px black solid;
+          padding: 5px;
+          border-radius: 5px; }
+        .paparec .container .leftstuff .ing .sendbutton:hover {
+          background-color: #CECCCE;
+          cursor: pointer; }
     .paparec .container .rightstuff {
       margin-top: 10px;
       height: 100%;

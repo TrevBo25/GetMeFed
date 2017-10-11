@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Chivo");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+a {
+  text-decoration: none;
+  color: #EFEDEF; }
+
+.cardholder {
+  width: 1000px;
+  height: 270px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  border-radius: 5px; }
+  .cardholder .imgholder {
+    width: 400px;
+    height: 270px;
+    border-radius: 5px;
+    background-color: black; }
+    .cardholder .imgholder .imgimg {
+      height: 100%;
+      width: 100%;
+      border-radius: 5px; }
+  .cardholder .junk {
+    margin-right: 5px;
+    height: 240px;
+    width: 580px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .cardholder .junk .thisjunk {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 450px;
+      height: 230px;
+      margin-left: 5px;
+      font-family: "Chivo", sans-serif; }
+      .cardholder .junk .thisjunk .title {
+        font-size: 35px;
+        color: black;
+        text-align: center; }
+      .cardholder .junk .thisjunk .title:hover {
+        color: #4C4947; }
+      .cardholder .junk .thisjunk .notes .notestitle {
+        font-family: "Roboto", sans-serif; }
+      .cardholder .junk .thisjunk .notes .notesbox {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        width: 400px; }
+    .cardholder .junk .thatjunk {
+      height: 230px;
+      width: 110px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 5px; }
+      .cardholder .junk .thatjunk .deletebutton {
+        height: 70px;
+        width: 60px;
+        background-image: url("../../assets/deletelight.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        transform: translateY(20px); }
+      .cardholder .junk .thatjunk .deletebutton:hover {
+        background-image: url("../../assets/deletedark.png");
+        cursor: pointer; }
+      .cardholder .junk .thatjunk .submit {
+        height: 100px;
+        width: 100px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center; }
+        .cardholder .junk .thatjunk .submit .submitbutton {
+          font-family: "Chivo", sans-serif;
+          font-size: 25px;
+          padding: 3px;
+          border: 1px black solid;
+          border-radius: 5px; }
+        .cardholder .junk .thatjunk .submit .submitbutton:hover {
+          background-color: #CECCCE;
+          cursor: pointer; }

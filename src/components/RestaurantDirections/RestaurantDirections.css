@@ -34,6 +34,8 @@ a {
       justify-content: center;
       align-items: center;
       margin-left: 20px; }
+    .papard .navbar .navhome:hover {
+      color: #CECCCE; }
     .papard .navbar .navlinks {
       height: 100%;
       width: 300px;
@@ -42,7 +44,11 @@ a {
       font-size: 25px;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      position: absolute;
+      right: calc(50% - 150px); }
+      .papard .navbar .navlinks a:hover {
+        color: #CECCCE; }
     .papard .navbar .navlinksright {
       height: 100%;
       color: #EFEDEF;
@@ -53,6 +59,8 @@ a {
       align-items: center; }
       .papard .navbar .navlinksright a {
         margin-right: 30px; }
+      .papard .navbar .navlinksright a:hover {
+        color: #CECCCE; }
   .papard .container {
     display: flex;
     justify-content: space-around;
@@ -65,7 +73,19 @@ a {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      align-items: center; }
+      align-items: center;
+      position: relative; }
+      .papard .container .leftstuff .favbutton {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        font-family: "Roboto", sans-serif;
+        border: 2px black solid;
+        padding: 5px;
+        border-radius: 5px; }
+      .papard .container .leftstuff .favbutton:hover {
+        background-color: #CECCCE;
+        cursor: pointer; }
       .papard .container .leftstuff .name {
         width: 400px;
         font-family: "Chivo", sans-serif;
@@ -145,8 +165,12 @@ a {
         width: 730px;
         font-family: "Roboto", sans-serif; }
         .papard .container .rightstuff .reviews .reviewbartitle {
+          width: 100px;
           font-family: "Chivo", sans-serif;
-          font-size: 28px; }
+          font-size: 28px;
+          color: black; }
+        .papard .container .rightstuff .reviews .reviewbartitle:hover {
+          color: #4C4947; }
         .papard .container .rightstuff .reviews .revlist {
           width: 750px;
           height: 150px; }

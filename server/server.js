@@ -7,7 +7,8 @@ const express = require('express'),
       Auth0Strategy = require('passport-auth0'),
       axios = require('axios'),
       cors = require('cors')
-      controller = require('./controller');
+      controller = require('./controller'),
+      twilio = require('twilio');
 
 const app = express();
 app.use(cors());
@@ -86,7 +87,7 @@ app.get('/auth/user', passport.authenticate("auth0"), (req, res, next) => {
 
 app.get('/auth/logout', (req, res) => {
     req.logOut();
-    res.redirect(302, 'http://localhost:3000/')
+    res.redirect(302, `https:${process.env.AUTH_DOMAIN}/v2/logout?returnTo=http://localhost:3000/`)
 })
 
 app.get('/api/search/:that', (req, res) => {
@@ -110,12 +111,22 @@ app.get('/api/reviews/:thang',(req, res) => {
     }).catch(err => console.log(err))
 })
 
+var client = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+
+app.post('/api/sendingreds', (req, res) => {
+    client.messages.create({
+        to: req.body.number,
+        from: '(563) 607-5800',
+        body: req.body.ingredients
+    });
+})
+
 app.post('/api/postfave',controller.postFave);
 app.get('/api/getfaves',controller.getFaves);
 app.get('/api/getfavesrec',controller.getFavesRec);
 app.get('/api/getfavesres',controller.getFavesRes);
-app.delete('/api/deletefave',controller.deleteFave);
-app.post('/api/editnote', controller.editNote);
+app.delete('/api/deletefave/:name',controller.deleteFave);
+app.put('/api/editnote', controller.editNote);
 
 
 const PORT = 3535;

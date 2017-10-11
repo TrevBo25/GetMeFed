@@ -44,14 +44,20 @@ module.exports = {
 
     deleteFave(req, res) {
         const db = req.app.get('db')
-        const {name} = req.body;
+        const {name} = req.params;
+        console.log(name)
         db.delete_favorite([name, req.user.auth_id])
         .then(response => {
-            res.status(200)
+            res.status(200).send('cool')
         }).catch( err => console.log('err', err))
     },
     
     editNote(req, res) {
         const db = req.app.get('db')
+        const {notes, name} = req.body;
+        db.edit_note([notes, name, req.user.auth_id])
+        .then( response => {
+            res.status(200).send('cool')
+        }).catch(err => console.log('err', err))
     }
 }

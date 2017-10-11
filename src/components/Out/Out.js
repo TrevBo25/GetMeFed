@@ -107,6 +107,7 @@ class Out extends Component{
                         </div>
                         <div className="navlinksright">
                             <a href="/#/about"><div>About</div></a>
+                            <a href="http://localhost:3535/auth/logout"><div>Logout</div></a>
                         </div>
                     </div>
                     <div className="container">

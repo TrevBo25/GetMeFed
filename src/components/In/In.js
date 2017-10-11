@@ -61,6 +61,7 @@ class In extends Component{
         .then( response => {
             let randRec = response.data.recipes[Math.floor(Math.random() * (response.data.recipes.length - 0 + 1)) + 0].recipe_id;
             this.props.getSelectedRecipeID(randRec)
+            this.props.history.push(`/recipe/${randRec}`)
         }).catch(err => console.log(err))
     }
 
@@ -71,6 +72,7 @@ class In extends Component{
         .then( response => {
             let randRec = response.data.recipes[Math.floor(Math.random() * (response.data.recipes.length - 0 + 1)) + 0].recipe_id;
             this.props.getSelectedRecipeID(randRec)
+            this.props.history.push(`/recipe/${randRec}`)
         }).catch(err => console.log(err))
     }
 
@@ -81,6 +83,7 @@ class In extends Component{
         .then( response => {
             let randRec = response.data.recipes[Math.floor(Math.random() * (response.data.recipes.length - 0 + 1)) + 0].recipe_id;
             this.props.getSelectedRecipeID(randRec)
+            this.props.history.push(`/recipe/${randRec}`)
         }).catch(err => console.log(err))
     }
 
@@ -91,6 +94,7 @@ class In extends Component{
         .then( response => {
             let randRec = response.data.recipes[Math.floor(Math.random() * (response.data.recipes.length - 0 + 1)) + 0].recipe_id;
             this.props.getSelectedRecipeID(randRec)
+            this.props.history.push(`/recipe/${randRec}`)
         }).catch(err => console.log(err))
     }
 
@@ -101,6 +105,7 @@ class In extends Component{
         .then( response => {
             let randRec = response.data.recipes[Math.floor(Math.random() * (response.data.recipes.length - 0 + 1)) + 0].recipe_id;
             this.props.getSelectedRecipeID(randRec)
+            this.props.history.push(`/recipe/${randRec}`)
         }).catch(err => console.log(err))
     }
     
@@ -112,7 +117,7 @@ class In extends Component{
 
 
     render(){
-
+        console.log(this.props)
         if (this.state.submitted) {
             return (
               <Redirect to="/recipes"/>
@@ -131,6 +136,7 @@ class In extends Component{
                         </div>
                         <div className="navlinksright">
                             <a href="/#/about"><div>About</div></a>
+                            <a href="http://localhost:3535/auth/logout"><div>Logout</div></a>
                         </div>
                     </div>
                     <div className="container">
@@ -169,4 +175,4 @@ function mapStateToProps(state){
     }
 }
 
-export default connect(mapStateToProps, {getLat, getLong, getRecipes, getSelectedRecipeID})(In)
+export default connect(mapStateToProps, {getLat, getLong, getRecipes, getSelectedRecipeID})(In);

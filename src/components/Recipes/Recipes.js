@@ -15,9 +15,6 @@ class Recipes extends Component{
     selectRecipe(rec){
         this.props.getSelectedRecipeID(rec);
     }
-    
-    // <a href={`/#/recipe/${v.recipe_id}`}><button value={v.recipe_id} onClick={e => {
-    //     }}>select this one</button></a>
 
     render(){
 
@@ -57,6 +54,7 @@ class Recipes extends Component{
                         </div>
                         <div className="navlinksright">
                             <a href="/#/about"><div>About</div></a>
+                            <a href="http://localhost:3535/auth/logout"><div>Logout</div></a>
                         </div>
                     </div>
                     <br/>

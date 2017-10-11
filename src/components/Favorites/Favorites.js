@@ -3,7 +3,8 @@ import '../../reset.css';
 import './Favorites.css';
 import {connect} from 'react-redux';
 import axios from 'axios';
-import TextareaAutosize from 'react-autosize-textarea';
+import FavoriteCard from '../FavoriteCard/FavoriteCard';
+import classNames from 'classnames';
 
 
 
@@ -18,31 +19,33 @@ class Favorites extends Component{
             edit: ""
         }
 
-        this.submitEdit = this.submitEdit.bind(this)
+        this.getStuff=this.getStuff.bind(this)
+        this.handleClick=this.handleClick.bind(this)
     }
 
         componentDidMount(){
+            this.getStuff()
+        }
+
+        getStuff(){
             const all = axios.get('/api/getfaves')
             .then ( response => {
-                console.log('all', response)
                 return response.data;
             })
 
             const rec = axios.get('/api/getfavesrec')
             .then ( response => {
-                console.log('recc', response)
                 return response.data;
             })
 
             const res = axios.get('/api/getfavesres')
             .then ( response => {
-                console.log('ress', response)
                 return response.data;
             })
 
             axios.all([all, rec, res])
             .then( resp => {
-                console.log(resp[0])
+                console.log(resp)
                 this.setState({
                     all: resp[0],
                     rec: resp[1],
@@ -52,48 +55,47 @@ class Favorites extends Component{
         }
 
         deleteFavorite(str){        
-            console.log('hi');
-            axios.delete('/api/deletefave',{
-                name: `${str}`
+            axios.delete(`/api/deletefave/${str}`)
+            .then( response => this.getStuff())
+        }
+
+        handleClick(str){
+            this.setState({
+                show: str
             })
         }
 
-        submitEdit(){
-
-        }
-
     render(){
+
+        let allclass = classNames({
+            "radioo": true,
+            "alls": true,
+            "clickered": this.state.show === "all"
+        })
+
+        let recclass = classNames({
+            "radioo": true,
+            "clickered": this.state.show === "rec"
+        })
+
+        let resclass = classNames({
+            "radioo": true,
+            "ress": true,
+            "clickered": this.state.show === "res"
+        })
+
         let list = []
         if(this.state.show === "all"){
             list = this.state.all;
         } else if (this.state.show === "rec"){
             list = this.state.rec;
-        } else {
-            list === this.state.res;
+        } else if (this.state.show === "res"){
+            list = this.state.res;
         }
 
         const favcards = list.map((v, i, a) => {
             return (
-                <div className="cardholder" key={i}>
-                    <div className="imgholder">
-                        <img src={v.img} alt="" className="imgimg" />
-                    </div>
-                    <div className="junk">
-                        <div className="thisjunk">
-                            <h1 className="title">{v.name}</h1>
-                            <div className="notes">
-                                <h4 className="notestitle">Notes:</h4>
-                                <TextareaAutosize rows={6} maxRows={6} value={v.notes} className="notesbox" />
-                            </div>
-                        </div>
-                        <div className="thatjunk">
-                            <div className="deletebutton" ></div>
-                            <div className="submit">
-                                <div className="submitbutton" onClick={this.submitEdit}>Submit</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <FavoriteCard favorite={v} getStuff={this.getStuff} key={v.code}/>
             )
         })
 
@@ -109,11 +111,19 @@ class Favorites extends Component{
                         </div>
                         <div className="navlinksright">
                             <a href="/#/about"><div>About</div></a>
+                            <a href="http://localhost:3535/auth/logout"><div>Logout</div></a>
                         </div>
                     </div>
                     <br />
                     <br />
                     <div className="container">
+                        <div className="radioholders">
+                            <form onClick={e => this.handleClick(e.target.value)} className="radios">
+                                <label for="all" className={allclass}><input id="all" type="radio" name="filter" value="all"  checked /> All</label>
+                                <label for="rec" className={recclass}><input id="rec" type="radio" name="filter" value="rec"  /> Recipes</label>
+                                <label for="res" className={resclass}><input id="res" type="radio" name="filter" value="res"  /> Restaurants</label>
+                            </form>
+                        </div>
                         {favcards}
                     </div>
                 </div>

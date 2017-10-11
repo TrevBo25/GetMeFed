@@ -44,6 +44,9 @@ a{text-decoration: none; color: $white-color;}
             align-items: center;
             margin-left: 20px;
         }
+        .navhome:hover{
+            color: $light-grey;
+        }
         .navlinks{
             height: 100%;
             width: 300px;
@@ -53,6 +56,11 @@ a{text-decoration: none; color: $white-color;}
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: absolute;
+            right: calc(50% - 150px);
+            a:hover{
+                color: $light-grey;
+            }
         }
         .navlinksright{
             height: 100%;
@@ -64,6 +72,9 @@ a{text-decoration: none; color: $white-color;}
             align-items: center;
             a{
                 margin-right: 30px;
+            }
+            a:hover{
+                color: $light-grey;
             }
         }
     }
@@ -84,6 +95,10 @@ a{text-decoration: none; color: $white-color;}
 
 .papahgo{
     transform: translateY(-15vh);
+}
+
+.papahhide{
+    transform: translateY( 100vh)
 }
 
 .maincard{
@@ -127,6 +142,8 @@ a{text-decoration: none; color: $white-color;}
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: absolute;
+            right: calc(50% - 150px);
         }
         .navlinksright{
             height: 100%;
@@ -225,6 +242,8 @@ a{text-decoration: none; color: $white-color;}
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: absolute;
+            right: calc(50% - 150px);
         }
         .navlinksright{
             height: 100%;
@@ -327,6 +346,8 @@ a{text-decoration: none; color: $white-color;}
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: absolute;
+            right: calc(50% - 150px);
         }
         .navlinksright{
             height: 100%;
@@ -425,6 +446,8 @@ a{text-decoration: none; color: $white-color;}
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: absolute;
+            right: calc(50% - 150px);
         }
         .navlinksright{
             height: 100%;
@@ -523,6 +546,8 @@ a{text-decoration: none; color: $white-color;}
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: absolute;
+            right: calc(50% - 150px);
         }
         .navlinksright{
             height: 100%;
@@ -625,6 +650,8 @@ a{text-decoration: none; color: $white-color;}
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: absolute;
+            right: calc(50% - 150px);
         }
         .navlinksright{
             height: 100%;

@@ -8,32 +8,67 @@ class Recipe extends Component{
     constructor(props){
         super(props)
         this.state = {
-            doIt: true
+            doIt: true,
+            recipe: {},
+            number: ""
         }
+        this.selectFavorite=this.selectFavorite.bind(this)
+        this.sendIngreds=this.sendIngreds.bind(this)
+        this.handleChange=this.handleChange.bind(this)
     }
 
     componentDidMount(){
 
         axios.get(`http://food2fork.com/api/get?key=6567b231491290ae92e3a731730b6723&rId=${this.props.match.params.id}`)
         .then ( response => {
-            this.props.setRecipe(response.data.recipe);
+            // this.props.setRecipe(response.data.recipe);
+            console.log(response.data.recipe)
+            this.setState({
+                recipe: response.data.recipe
+            })
         })
 
     }
+
+    selectFavorite(){
+        axios.post(`/api/postfave/`,{
+            type: "recipe",
+            busid: `${this.props.match.params.id}`,
+            name: `${this.state.recipe.title}`,
+            img: `${this.state.recipe.image_url}`,
+            notes: " "
+         })
+    }
     
+    sendIngreds(){
+        let ingredz = this.state.recipe.ingredients.join("\n")
+        axios.post('/api/sendingreds', {
+            ingredients: "\n" + ingredz,
+            number: this.state.number
+        })
+    }
+
+    handleChange(str){
+        this.setState({
+            number: str
+        })
+    }
    
     render(){
 
-        const ingreds = this.props.selectedRecipe.ingredients ? 
-            this.props.selectedRecipe.ingredients.map((v, i, a) => {
-                <li className="items" key={i}>
+        const ic = () => {
+            const icards = this.state.recipe.ingredients.map((v, i, a) => {
+                return(
+                <li className="ingitem" key={i}>
                     {v}
-                </li>
-            }) : <div>ingredients loading</div>;
-
+                </li>)
+            })
+            return icards;
+        }
+        
         return(
              <div>
-                 {this.props.selectedRecipe ? (
+                 {this.state.recipe ? (
                     <div className="paparec">
                         <div className="navbar">
                             <a href="/#/home"><div className="navhome"><h1>G</h1></div></a>
@@ -44,19 +79,25 @@ class Recipe extends Component{
                             </div>
                             <div className="navlinksright">
                                 <a href="/#/about"><div>About</div></a>
+                                <a href="http://localhost:3535/auth/logout"><div>Logout</div></a>
                             </div>
                         </div>
                         <div className="container">
                             <div className="leftstuff">
                                 <div className="name">
-                                    <h1 className="recname">{this.props.selectedRecipe.title}</h1>
-                                    <h3 className="rating">Social Rank: {this.props.selectedRecipe.social_rank}</h3>
+                                    <h1 className="recname">{this.state.recipe.title}</h1>
+                                    <h3 className="rating">Social Rank: {this.state.recipe.social_rank}</h3>
                                 </div>
                                 <div className="ing" >
+                                    <div onClick={this.selectFavorite} className="favbutton">FAVORITE?</div>
                                     <h2 className="ingtitle">Ingredients</h2>
                                     <ul className="inglist">
-                                        {ingreds}
+                                        {this.state.recipe.ingredients ? ic() : null}
                                     </ul>
+                                    <div>
+                                        <input onChange={ e => {this.handleChange(e.target.value)}} placeholder="Enter your phone #" />
+                                        <div className="sendbutton" onClick={this.sendIngreds}>Send ingredients to phone</div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="rightstuff">
@@ -64,7 +105,7 @@ class Recipe extends Component{
                                     <iframe
                                         frameBorder="0"
                                         title="map"
-                                        src={this.props.selectedRecipe.source_url}>
+                                        src={this.state.recipe.source_url}>
                                     </iframe>
                                 </div>
                             </div>

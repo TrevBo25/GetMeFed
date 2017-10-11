@@ -44,6 +44,9 @@ a{text-decoration: none; color: $white-color;}
             align-items: center;
             margin-left: 20px;
         }
+        .navhome:hover{
+            color: $light-grey;
+        }
         .navlinks{
             height: 100%;
             width: 300px;
@@ -53,6 +56,11 @@ a{text-decoration: none; color: $white-color;}
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: absolute;
+            right: calc(50% - 150px);
+            a:hover{
+                color: $light-grey;
+            }
         }
         .navlinksright{
             height: 100%;
@@ -64,6 +72,9 @@ a{text-decoration: none; color: $white-color;}
             align-items: center;
             a{
                 margin-right: 30px;
+            }
+            a:hover{
+                color: $light-grey;
             }
         }
     }
@@ -80,6 +91,20 @@ a{text-decoration: none; color: $white-color;}
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
+            position: relative;
+            .favbutton{
+                position: absolute;
+                top: 50px;
+                right: 0;
+                font-family: $secondary-font;
+                border: 2px black solid;
+                padding: 5px;
+                border-radius: 5px;
+            }
+            .favbutton:hover{
+                background-color: $light-grey;
+                cursor: pointer;
+            }
             .name{
                 width: 400px;
                 font-family: $primary-font;
@@ -176,8 +201,13 @@ a{text-decoration: none; color: $white-color;}
                 width: 730px;
                 font-family: $secondary-font;
                 .reviewbartitle{
+                    width: 100px;
                     font-family: $primary-font;
                     font-size: 28px;
+                    color: black;
+                }
+                .reviewbartitle:hover{
+                    color: $dark-grey;
                 }
                 .revlist{
                     width:750px;

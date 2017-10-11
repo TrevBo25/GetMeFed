@@ -14,8 +14,7 @@ a{text-decoration: none; color: $white-color;}
 
 .papaf{
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(to bottom, white 0%, $white-color 100%);
+    background: linear-gradient(to bottom, white 0%, $white-color 200%);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -24,7 +23,6 @@ a{text-decoration: none; color: $white-color;}
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: auto;
     .navbar{
         width: 100%;
         height: 60px;
@@ -44,6 +42,9 @@ a{text-decoration: none; color: $white-color;}
             align-items: center;
             margin-left: 20px;
         }
+        .navhome:hover{
+            color: $light-grey;
+        }
         .navlinks{
             height: 100%;
             width: 300px;
@@ -53,6 +54,11 @@ a{text-decoration: none; color: $white-color;}
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: absolute;
+            right: calc(50% - 150px);
+            a:hover{
+                color: $light-grey;
+            }
         }
         .navlinksright{
             height: 100%;
@@ -65,6 +71,9 @@ a{text-decoration: none; color: $white-color;}
             a{
                 margin-right: 30px;
             }
+            a:hover{
+                color: $light-grey;
+            }
         }
     }
     .container{
@@ -73,98 +82,41 @@ a{text-decoration: none; color: $white-color;}
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        transform: translateY(110px);
-        .cardholder{
-            width: 1000px;
-            height: 270px;
-            background-color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 10px;
-            border-radius: 5px;
-            .imgholder{
-                width: 400px;
-                height: 200px;
-                border-radius: 5px;
-                background-color: black;
-                .imgimg{
-                    height: 100%;
-                    width: 100%;
-                    border-radius: 5px;                    
-                }
-            }
-            .junk{
-                margin-right: 5px;
-                height: 240px;
-                width: 580px;
-                border-radius: 5px;
+        justify-content: center;
+        margin-top: 60px;
+        .radioholders{
+            margin-top: 10px;
+            .radios{
+                width: 350px;
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
-                .thisjunk{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    align-items: center;
-                    width: 450px;
-                    height: 230px;
-                    margin-left: 5px;
-                    font-family: $primary-font;
-                    .title{
-                        font-size: 35px;
-                    }
-                    .notes{
-                        .notestitle{
-                            font-family: $secondary-font;
-                        }
-                        .notesbox{
-                            font-family: $secondary-font;
-                            font-size: 15px;
-                            width: 400px;
-                        }
-                    }
+                [type=radio]{
+                    display: none;
                 }
-                .thatjunk{
-                    height: 230px;
-                    width: 110px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    margin-right: 5px;
-                    .deletebutton{
-                        height: 70px;
-                        width: 60px;
-                        background-image: url("../../assets/deletelight.png");
-                        -webkit-background-size: cover;
-                        -moz-background-size: cover;
-                        -o-background-size: cover;
-                        background-size: cover;
-                        background-position: center;
-                        transform: translateY(20px);
-                    }
-                    .deletebutton:hover{
-                        background-image: url("../../assets/deletedark.png");
-                    }
-                    .submit{
-                        height: 100px;
-                        width: 100px;
-                        display: flex;
-                        align-items: flex-end;
-                        justify-content: center;
-                        .submitbutton{
-                            font-family: $primary-font;
-                            font-size: 25px;
-                            padding: 3px;
-                            border: 1px black solid;
-                            border-radius: 5px;
-                        }
-                        .submitbutton:hover{
-                            background-color: $light-grey;
-                        }
-                    }
+                .radioo{
+                    font-family: $secondary-font;
+                    font-size: 20px;
+                    background-color: $light-grey;
+                    padding: 10px;
+                    border: 2px black solid;
+                    flex: 1;
+                    text-align: center;
+                }
+                .alls{
+                    border-radius: 5px 0px 0px 5px;
+                }
+                .ress{
+                    border-radius: 0px 5px 5px 0px;
+                }
+                .clickered{
+                    font-family: $secondary-font;
+                    font-size: 20px;
+                    background-color: $dark-grey;
+                    padding: 10px;
+                    border: 2px black solid;
+                    flex: 1;
+                    color: white;
+                    text-align: center;
                 }
             }
         }

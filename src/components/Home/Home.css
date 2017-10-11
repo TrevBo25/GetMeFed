@@ -36,6 +36,8 @@ a {
       justify-content: center;
       align-items: center;
       margin-left: 20px; }
+    .papah .navbar .navhome:hover {
+      color: #CECCCE; }
     .papah .navbar .navlinks {
       height: 100%;
       width: 300px;
@@ -44,7 +46,11 @@ a {
       font-size: 25px;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      position: absolute;
+      right: calc(50% - 150px); }
+      .papah .navbar .navlinks a:hover {
+        color: #CECCCE; }
     .papah .navbar .navlinksright {
       height: 100%;
       color: #EFEDEF;
@@ -55,6 +61,8 @@ a {
       align-items: center; }
       .papah .navbar .navlinksright a {
         margin-right: 30px; }
+      .papah .navbar .navlinksright a:hover {
+        color: #CECCCE; }
   .papah .topholder {
     display: flex;
     align-items: center;
@@ -69,6 +77,9 @@ a {
 
 .papahgo {
   transform: translateY(-15vh); }
+
+.papahhide {
+  transform: translateY(100vh); }
 
 .maincard {
   top: 100vh;
@@ -109,7 +120,9 @@ a {
       font-size: 25px;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      position: absolute;
+      right: calc(50% - 150px); }
     .maincard .navbar .navlinksright {
       height: 100%;
       color: #EFEDEF;
@@ -197,7 +210,9 @@ a {
       font-size: 25px;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      position: absolute;
+      right: calc(50% - 150px); }
     .maincardshow .navbar .navlinksright {
       height: 100%;
       color: #EFEDEF;
@@ -288,7 +303,9 @@ a {
       font-size: 25px;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      position: absolute;
+      right: calc(50% - 150px); }
     .maincardgo .navbar .navlinksright {
       height: 100%;
       color: #EFEDEF;
@@ -376,7 +393,9 @@ a {
       font-size: 25px;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      position: absolute;
+      right: calc(50% - 150px); }
     .secondcard .navbar .navlinksright {
       height: 100%;
       color: #EFEDEF;
@@ -464,7 +483,9 @@ a {
       font-size: 25px;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      position: absolute;
+      right: calc(50% - 150px); }
     .secondcardshow .navbar .navlinksright {
       height: 100%;
       color: #EFEDEF;
@@ -555,7 +576,9 @@ a {
       font-size: 25px;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      position: absolute;
+      right: calc(50% - 150px); }
     .secondcardgo .navbar .navlinksright {
       height: 100%;
       color: #EFEDEF;

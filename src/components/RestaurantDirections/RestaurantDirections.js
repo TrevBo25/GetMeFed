@@ -86,7 +86,7 @@ class RestaurantDirections extends Component{
                 )}
             }) : <div>hours loading</div>;
         
-
+            console.log(this.props.selectedBus)
 
         return(
              <div>
@@ -101,10 +101,12 @@ class RestaurantDirections extends Component{
                         </div>
                         <div className="navlinksright">
                             <a href="/#/about"><div>About</div></a>
+                            <a href="http://localhost:3535/auth/logout"><div>Logout</div></a>
                         </div>
                     </div>
                     <div className="container">
                         <div className="leftstuff">
+                        <div onClick={this.selectFavorite} className="favbutton" >FAVORITE?</div>
                             <div className="name">
                                 <h1 className="resname">{this.props.selectedBus.name}</h1>
                                 <h4 className="rating">Rating: {this.props.selectedBus.rating}</h4>
@@ -155,7 +157,7 @@ class RestaurantDirections extends Component{
                             </div>
                             <div className="reviews">
                                 <div className="reviewbar">
-                                    <h2 className="reviewbartitle">REVIEWS <button onClick={this.selectFavorite}>SET AS FAVORITE</button></h2>
+                                    <a href={this.props.selectedBus.url}><h2 className="reviewbartitle">REVIEWS</h2></a>
                                     <br/>
                                 </div>
                                 <div className="revwords">

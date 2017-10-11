@@ -43,6 +43,9 @@ a{text-decoration: none; color: $white-color;}
             align-items: center;
             margin-left: 20px;
         }
+        .navhome:hover{
+            color: $light-grey;
+        }
         .navlinks{
             height: 100%;
             width: 300px;
@@ -52,6 +55,11 @@ a{text-decoration: none; color: $white-color;}
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: absolute;
+            right: calc(50% - 150px);
+            a:hover{
+                color: $light-grey;
+            }
         }
         .navlinksright{
             height: 100%;
@@ -63,6 +71,9 @@ a{text-decoration: none; color: $white-color;}
             align-items: center;
             a{
                 margin-right: 30px;
+            }
+            a:hover{
+                color: $light-grey;
             }
         }
     }
@@ -113,13 +124,14 @@ a{text-decoration: none; color: $white-color;}
                 }
                 .junk{
                     height: 120px;
+                    width: 400px;
                     font-family: $secondary-font;
                     display: flex;
                     justify-content: space-around;
                     .junkleft{
                         display: flex;
                         flex-direction: column;
-                        justify-content: space-around;
+                        justify-content: space-between;
                         align-items: center;
                         color: black;
                         .rating{
@@ -140,6 +152,7 @@ a{text-decoration: none; color: $white-color;}
                             border-radius: 5px;
                             font-size: 20px;
                             padding: 7px;
+                            margin-top: 10px;
                         }
                         .selectbutton:hover{
                             background-color: $light-grey;

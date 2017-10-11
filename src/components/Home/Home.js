@@ -59,6 +59,7 @@ class Home extends Component{
                             </div>
                             <div className="navlinksright">
                                 <a href="/#/about"><div>About</div></a>
+                                <a href="http://localhost:3535/auth/logout"><div>Logout</div></a>
                             </div>
                         </div>
                         <div className="topholder">
@@ -77,6 +78,7 @@ class Home extends Component{
                                 </div>
                                 <div className="navlinksright">
                                     <a href="/#/about"><div>About</div></a>
+                                    <a href="http://localhost:3535/auth/logout"><div>Logout</div></a>
                                 </div>
                             </div>
                                 <div className="maincardcontent">
@@ -98,6 +100,7 @@ class Home extends Component{
                             </div>
                             <div className="navlinksright">
                                 <a href="/#/about"><div>About</div></a>
+                                <a href="http://localhost:3535/auth/logout"><div>Logout</div></a>
                             </div>
                         </div>
                         <div className="secondcardcontent">
