@@ -71,7 +71,7 @@ passport.deserializeUser(function(userID, done){
 app.get('/auth', passport.authenticate('auth0'));
 
 app.get('/auth/callback', passport.authenticate('auth0',{
-    successRedirect: 'http://138.68.255.191:3535/#/home',
+    successRedirect: `${process.env.HOST}/#/home`,
     failureRedirect: '/auth'
 }))
 
@@ -88,7 +88,7 @@ app.get('/auth/user', passport.authenticate("auth0"), (req, res, next) => {
 
 app.get('/auth/logout', (req, res) => {
     req.logOut();
-    res.redirect(302, `https:${process.env.AUTH_DOMAIN}/v2/logout?returnTo=http://138.68.255.191:3535/`)
+    res.redirect(302, `https:${process.env.AUTH_DOMAIN}/v2/logout?returnTo=${process.env.HOST}`)
 })
 
 app.get('/api/search/:that', (req, res) => {
