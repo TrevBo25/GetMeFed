@@ -83,10 +83,11 @@ a{text-decoration: none; color: $white-color;}
         justify-content: space-around;
         position: absolute;
         top: 55px;
+        width: 100%;
         .leftstuff{
             margin: 10px;
             height: 100%;
-            width: 400px;
+            width: 33%;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
@@ -180,7 +181,7 @@ a{text-decoration: none; color: $white-color;}
         .rightstuff{
             margin-top: 10px;
             height: 100%;
-            width: 800px;
+            width: 66%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -194,6 +195,7 @@ a{text-decoration: none; color: $white-color;}
                 .pics{
                     height: 380px;
                     width: 730px;
+                    object-fit: scale-down;
                 }
             }
             .reviews{

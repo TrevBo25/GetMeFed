@@ -71,14 +71,14 @@ class RestaurantDirections extends Component{
                 let beg = "";
                 let fin = "";
                 if(v.start.charAt(0) === "0"){
-                    beg = (v.start.substr(1,1) + ":" + v.start.substr(2, 2));
-                    fin = ((+v.end.substr(0,2) - 12).toString() + ":" + v.end.substr(2, 2));
+                    beg = (v.start.substr(1,1) + ":" + v.start.substr(2, 2) + "am");
+                    fin = ((+v.end.substr(0,2) - 12).toString() + ":" + v.end.substr(2, 2) + "pm");
                 } else if (+v.start.substr(0,2) > 12){
-                    beg = ((+v.start.substr(0,2) - 12).toString() + ":" + v.start.substr(2, 2));
-                    fin = ((+v.end.substr(0,2) - 12).toString() + ":" + v.end.substr(2, 2));
+                    beg = ((+v.start.substr(0,2) - 12).toString() + ":" + v.start.substr(2, 2) + "pm");
+                    fin = ((+v.end.substr(0,2) - 12).toString() + ":" + v.end.substr(2, 2) + "pm");
                 } else {
-                    beg = (v.start.substr(0,2) + ":" + v.start.substr(2, 2));
-                    fin = ((+v.end.substr(0,2) - 12).toString() + ":" + v.end.substr(2, 2));
+                    beg = (v.start.substr(0,2) + ":" + v.start.substr(2, 2) + "am");
+                    fin = ((+v.end.substr(0,2) - 12).toString() + ":" + v.end.substr(2, 2) + "pm");
                 }
                 if(i<7){
                 return (

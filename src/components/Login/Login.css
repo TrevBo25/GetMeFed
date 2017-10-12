@@ -25,9 +25,12 @@ a {
     align-items: center;
     justify-content: space-around; }
     .papa .herobox .header {
-      color: #EFEDEF;
+      background: -webkit-linear-gradient(#EFEDEF, #CECCCE, #EFEDEF, #CECCCE);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-family: "Chivo", sans-serif;
-      font-size: 130px; }
+      font-size: 130px;
+      font-weight: bold; }
     .papa .herobox .loginbutton {
       color: #EFEDEF;
       font-family: "Roboto", sans-serif;

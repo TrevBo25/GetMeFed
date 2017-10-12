@@ -96,8 +96,12 @@ a{text-decoration: none}
             justify-content: space-between;
             align-items: center;
             color: white;
+            .fa{
+                transition: all .6s ease-in-out;
+            }
             .fa:hover{
                 color: $light-grey;
+                transform: scale(1.2);
             }
         }
     }

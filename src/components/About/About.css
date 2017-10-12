@@ -79,5 +79,8 @@ a {
       justify-content: space-between;
       align-items: center;
       color: white; }
+      .papaa .topholder .contactbuttonholder .fa {
+        transition: all .6s ease-in-out; }
       .papaa .topholder .contactbuttonholder .fa:hover {
-        color: #CECCCE; }
+        color: #CECCCE;
+        transform: scale(1.2); }

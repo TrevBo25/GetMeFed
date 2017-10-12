@@ -51,18 +51,22 @@ class Home extends Component{
         return(
                 <div onWheel={e => {this.handleScroll(e); e.persist();}}>
                     <div className="navbar">
-                            <a href="/#/home"><div className="navhome"><h1 className="g">G</h1></div></a>
-                            <div className="navlinks">
-                                <a href="/#/out"><div>Eat Out</div></a>
-                                <a href="/#/in"><div>Eat In</div></a>
-                                <a href="/#/favorites"><div>Favorites</div></a>
-                            </div>
-                            <div className="navlinksright">
-                                <a href="/#/about"><div>About</div></a>
-                                <a href="http://localhost:3535/auth/logout"><div>Logout</div></a>
-                            </div>
+                        <a href="/#/home"><div className="navhome"><h1 className="g">G</h1></div></a>
+                        <div className="navlinks">
+                            <a href="/#/out"><div>Eat Out</div></a>
+                            <a href="/#/in"><div>Eat In</div></a>
+                            <a href="/#/favorites"><div>Favorites</div></a>
                         </div>
-                    <div className={this.state.scroll === 1 ? "topcardshow topcardgo" : "topcardshow"}>       
+                        <div className="navlinksright">
+                            <a href="/#/about"><div>About</div></a>
+                            <a href="http://localhost:3535/auth/logout"><div>Logout</div></a>
+                        </div>
+                    </div>
+                    <div className={this.state.scroll === 1 ? "topcardshow topcardgo" : "topcardshow"}> 
+                    <div className="content">
+                        <h1 className="title">GET ME FED</h1>
+                        <p className="words">You look hungry. Why don't you scroll down to find out what we can do.</p>
+                    </div>      
                     </div>
                     <div className={this.state.scroll === 2 ? "papah papahgo" : ( this.state.scroll === 1 ? "papah" : "papahhide")}>
                         <div className="topholder">

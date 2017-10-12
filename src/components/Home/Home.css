@@ -432,7 +432,34 @@ a:hover {
   -o-background-size: cover;
   background-size: cover;
   background-position: center;
-  transition: all 2s ease; }
+  transition: all 2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .topcardshow .content {
+    margin-top: 10vh;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px; }
+    .topcardshow .content .title {
+      font-family: "Chivo", sans-serif;
+      background: -webkit-linear-gradient(#EFEDEF, #CECCCE, #CECCCE);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 150px;
+      font-weight: bold;
+      -webkit-transform: scale(1, 1.2); }
+    .topcardshow .content .words {
+      font-family: "Roboto", sans-serif;
+      margin-top: 20px;
+      font-size: 25px;
+      color: #EFEDEF;
+      text-align: center;
+      width: 600px; }
 
 .topcardgo {
   transform: translateY(-15vh); }

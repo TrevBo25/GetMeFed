@@ -65,11 +65,12 @@ a {
     display: flex;
     justify-content: space-around;
     position: absolute;
-    top: 55px; }
+    top: 55px;
+    width: 100%; }
     .papard .container .leftstuff {
       margin: 10px;
       height: 100%;
-      width: 400px;
+      width: 33%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
@@ -146,7 +147,7 @@ a {
     .papard .container .rightstuff {
       margin-top: 10px;
       height: 100%;
-      width: 800px;
+      width: 66%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -159,7 +160,8 @@ a {
         border: 1px #CECCCE solid; }
         .papard .container .rightstuff .photos .pics {
           height: 380px;
-          width: 730px; }
+          width: 730px;
+          object-fit: scale-down; }
       .papard .container .rightstuff .reviews {
         height: 100%;
         width: 730px;

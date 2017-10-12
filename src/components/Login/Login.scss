@@ -32,9 +32,12 @@ a{text-decoration: none}
         align-items: center;
         justify-content: space-around;
         .header{
-            color: $white-color;
+            background: -webkit-linear-gradient($white-color, $light-grey, $white-color, $light-grey);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-family: $primary-font;
             font-size: 130px;
+            font-weight: bold;
         }
         .loginbutton{
             color: $white-color;
