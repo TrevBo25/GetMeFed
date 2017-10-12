@@ -95,7 +95,7 @@ app.get('/api/search/:that', (req, res) => {
     axios.get(`https://api.yelp.com/v3/businesses/search?${req.params.that}`,{'headers': {'Authorization':process.env.ACCESS_TOKEN}})
     .then(response => {
         res.status(200).json(response.data)
-    }).catch(err=>console.log(err))
+    }).catch(err=>console.log("maybe here", err))
 })
 
 app.get('/api/business/:thing',(req, res) => {
