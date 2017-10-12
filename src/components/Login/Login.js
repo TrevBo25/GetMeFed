@@ -11,7 +11,7 @@ class Login extends Component{
                 <div className="papa">
                     <div className="herobox">
                         <h1 className="header">GET ME FED</h1>
-                        <a href="http://localhost:3535/auth"><div className="loginbutton">LOGIN/REGISTER</div></a>
+                        <a href="/auth"><div className="loginbutton">LOGIN/REGISTER</div></a>
                         <div></div>
                     </div>
                 </div>

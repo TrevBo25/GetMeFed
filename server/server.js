@@ -24,6 +24,7 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(express.static('build'));
 
 massive(process.env.CONNECTION_STRING).then( db => {
     app.set('db', db);
@@ -70,7 +71,7 @@ passport.deserializeUser(function(userID, done){
 app.get('/auth', passport.authenticate('auth0'));
 
 app.get('/auth/callback', passport.authenticate('auth0',{
-    successRedirect: 'http://localhost:3000/#/home',
+    successRedirect: `${process.env.HOST}/#/home`,
     failureRedirect: '/auth'
 }))
 
@@ -87,7 +88,7 @@ app.get('/auth/user', passport.authenticate("auth0"), (req, res, next) => {
 
 app.get('/auth/logout', (req, res) => {
     req.logOut();
-    res.redirect(302, `https:${process.env.AUTH_DOMAIN}/v2/logout?returnTo=http://localhost:3000/`)
+    res.redirect(302, `https:${process.env.AUTH_DOMAIN}/v2/logout?returnTo=${process.env.HOST}`)
 })
 
 app.get('/api/search/:that', (req, res) => {
