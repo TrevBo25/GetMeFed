@@ -24,9 +24,9 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
-// if(process.env.NODE_ENV === 'production'){
-//     app.use(express.static('build'));
-// }
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('build'));
+}
 
 massive(process.env.CONNECTION_STRING).then( db => {
     app.set('db', db);
