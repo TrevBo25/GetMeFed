@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
 // if(process.env.NODE_ENV === 'production'){
-    app.use(express.static('build'));
+//     app.use(express.static('build'));
 // }
 
 massive(process.env.CONNECTION_STRING).then( db => {
@@ -90,7 +90,7 @@ app.get('/auth/user', passport.authenticate("auth0"), (req, res, next) => {
 
 app.get('/auth/logout', (req, res) => {
     req.logOut();
-    res.redirect(302, `https:${process.env.AUTH_DOMAIN}/v2/logout?returnTo=${process.env.SERVERSERVERHOST}`)
+    res.redirect(302, `https:${process.env.AUTH_DOMAIN}/v2/logout?returnTo=${process.env.SERVERHOST}`)
 })
 
 app.get('/api/search/:that', (req, res) => {
@@ -117,6 +117,13 @@ app.get('/api/reviews/:thang',(req, res) => {
 
 app.get('/api/foodsearch/:boom', (req, res) => {
     axios.get(`http://food2fork.com/api/search?key=6567b231491290ae92e3a731730b6723&q=${req.params.boom}`, {'headers': {'Access-Control-Allow-Origin': '*'}})
+    .then( response => {
+        res.status(200).json(response.data)
+    })
+})
+
+app.get('/api/getrecipe/:bam', (req, res) => {
+    axios.get(`http://food2fork.com/api/get?key=6567b231491290ae92e3a731730b6723&rId=${req.params.bam}`, {'headers': {'Access-Control-Allow-Origin': '*'}})
     .then( response => {
         res.status(200).json(response.data)
     })

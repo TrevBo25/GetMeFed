@@ -19,7 +19,7 @@ class Recipe extends Component{
 
     componentDidMount(){
 
-        axios.get(`http://food2fork.com/api/get?key=6567b231491290ae92e3a731730b6723&rId=${this.props.match.params.id}`)
+        axios.get(`/api/getrecipe/${this.props.match.params.id}`)
         .then ( response => {
             // this.props.setRecipe(response.data.recipe);
             console.log(response.data.recipe)

@@ -58,7 +58,7 @@ class In extends Component{
     getRandomBreakfast(){
         let randBreakfastValue = this.props.randBreakfast[Math.floor(Math.random() * (this.props.randBreakfast.length - 0 + 1)) + 0]
         console.log('br', randBreakfastValue);
-        axios.get(`http://food2fork.com/api/search?key=6567b231491290ae92e3a731730b6723&q=${randBreakfastValue}`)
+        axios.get(`/api/foodsearch/${randBreakfastValue}`)
         .then( response => {
             let randRec = response.data.recipes[Math.floor(Math.random() * (response.data.recipes.length - 0 + 1)) + 0].recipe_id;
             this.props.getSelectedRecipeID(randRec)
@@ -69,7 +69,7 @@ class In extends Component{
     getRandomLunch(){
         let randLunchValue = this.props.randLunch[Math.floor(Math.random() * (this.props.randLunch.length - 0 + 1)) + 0]
         console.log('l', randLunchValue);
-        axios.get(`http://food2fork.com/api/search?key=6567b231491290ae92e3a731730b6723&q=${randLunchValue}`)
+        axios.get(`/api/foodsearch/${randLunchValue}`)
         .then( response => {
             let randRec = response.data.recipes[Math.floor(Math.random() * (response.data.recipes.length - 0 + 1)) + 0].recipe_id;
             this.props.getSelectedRecipeID(randRec)
@@ -80,7 +80,7 @@ class In extends Component{
     getRandomDinner(){
         let randDinnerValue = this.props.randDinner[Math.floor(Math.random() * (this.props.randDinner.length - 0 + 1)) + 0]
         console.log('di', randDinnerValue);
-        axios.get(`http://food2fork.com/api/search?key=6567b231491290ae92e3a731730b6723&q=${randDinnerValue}`)
+        axios.get(`/api/foodsearch/${randDinnerValue}`)
         .then( response => {
             let randRec = response.data.recipes[Math.floor(Math.random() * (response.data.recipes.length - 0 + 1)) + 0].recipe_id;
             this.props.getSelectedRecipeID(randRec)
@@ -91,7 +91,7 @@ class In extends Component{
     getRandomDessert(){
         let randDessertValue = this.props.randDessert[Math.floor(Math.random() * (this.props.randDessert.length - 0 + 1)) + 0]
         console.log('de', randDessertValue);
-        axios.get(`http://food2fork.com/api/search?key=6567b231491290ae92e3a731730b6723&q=${randDessertValue}`)
+        axios.get(`/api/foodsearch/${randDessertValue}`)
         .then( response => {
             let randRec = response.data.recipes[Math.floor(Math.random() * (response.data.recipes.length - 0 + 1)) + 0].recipe_id;
             this.props.getSelectedRecipeID(randRec)
@@ -102,7 +102,7 @@ class In extends Component{
     getRandomDrink(){
         let randDrinkValue = this.props.randDrink[Math.floor(Math.random() * (this.props.randDrink.length - 0 + 1)) + 0]
         console.log('dr', randDrinkValue);
-        axios.get(`http://food2fork.com/api/search?key=6567b231491290ae92e3a731730b6723&q=${randDrinkValue}`)
+        axios.get(`/api/foodsearch/${randDrinkValue}`)
         .then( response => {
             let randRec = response.data.recipes[Math.floor(Math.random() * (response.data.recipes.length - 0 + 1)) + 0].recipe_id;
             this.props.getSelectedRecipeID(randRec)
