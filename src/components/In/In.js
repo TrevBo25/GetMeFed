@@ -45,7 +45,8 @@ class In extends Component{
     }
 
     searchRecipes(){
-        axios.get(`http://food2fork.com/api/search?key=6567b231491290ae92e3a731730b6723&q=${this.state.term}`)
+        console.log('search rec')
+        axios.get(`/api/foodsearch/${this.state.term}`)
         .then( response => {
             this.props.getRecipes(response.data.recipes);
             this.setState({

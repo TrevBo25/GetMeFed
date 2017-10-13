@@ -24,7 +24,9 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(express.static('build'));
+// if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('build'));
+// }
 
 massive(process.env.CONNECTION_STRING).then( db => {
     app.set('db', db);
@@ -71,7 +73,7 @@ passport.deserializeUser(function(userID, done){
 app.get('/auth', passport.authenticate('auth0'));
 
 app.get('/auth/callback', passport.authenticate('auth0',{
-    successRedirect: `${process.env.HOST}/#/home`,
+    successRedirect: `${process.env.SERVERHOST}/#/home`,
     failureRedirect: '/auth'
 }))
 
@@ -88,10 +90,11 @@ app.get('/auth/user', passport.authenticate("auth0"), (req, res, next) => {
 
 app.get('/auth/logout', (req, res) => {
     req.logOut();
-    res.redirect(302, `https:${process.env.AUTH_DOMAIN}/v2/logout?returnTo=${process.env.HOST}`)
+    res.redirect(302, `https:${process.env.AUTH_DOMAIN}/v2/logout?returnTo=${process.env.SERVERSERVERHOST}`)
 })
 
 app.get('/api/search/:that', (req, res) => {
+    console.log(req.params.that)
     axios.get(`https://api.yelp.com/v3/businesses/search?${req.params.that}`,{'headers': {'Authorization':process.env.ACCESS_TOKEN}})
     .then(response => {
         res.status(200).json(response.data)
@@ -110,6 +113,13 @@ app.get('/api/reviews/:thang',(req, res) => {
     .then(response => {
         res.status(200).json(response.data)
     }).catch(err => console.log(err))
+})
+
+app.get('/api/foodsearch/:boom', (req, res) => {
+    axios.get(`http://food2fork.com/api/search?key=6567b231491290ae92e3a731730b6723&q=${req.params.boom}`, {'headers': {'Access-Control-Allow-Origin': '*'}})
+    .then( response => {
+        res.status(200).json(response.data)
+    })
 })
 
 var client = new twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);

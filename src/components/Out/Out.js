@@ -53,6 +53,7 @@ class Out extends Component{
 
     buildCall(){
         let out = `term=${this.state.term}&price=${this.state.price}&latitude=${this.props.lat}&longitude=${this.props.long}&radius=40000&sort_by=best_match`
+        console.log(out);
         return out;
     }
 
