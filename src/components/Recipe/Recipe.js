@@ -65,9 +65,7 @@ class Recipe extends Component{
             })
             return icards;
         }
-
-        const web = (this.state.recipe.source_url.slice(0,4) + "s" + this.state.recipe.source_url.slice(4, (this.state.recipe.source_url.length - 1)));
-        console.log(web);
+        
         return(
              <div>
                  {this.state.recipe ? (
@@ -107,7 +105,7 @@ class Recipe extends Component{
                                     <iframe
                                         frameBorder="0"
                                         title="map"
-                                        src={web}>
+                                        src={this.state.recipe.source_url}>
                                     </iframe>
                                 </div>
                             </div>
