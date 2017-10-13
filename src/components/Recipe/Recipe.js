@@ -105,7 +105,7 @@ class Recipe extends Component{
                                     <iframe
                                         frameBorder="0"
                                         title="map"
-                                        src={this.state.recipe.source_url}>
+                                        src={(this.state.recipe.source_url.slice(0,4) + "s" + this.state.recipe.source_url.slice(4, (this.state.recipe.source_url.length - 1)))}>
                                     </iframe>
                                 </div>
                             </div>
