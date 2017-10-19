@@ -105,7 +105,7 @@ class Recipe extends Component{
                                     <iframe
                                         frameBorder="0"
                                         title="map"
-                                        src={this.state.recipe.source_url}>
+                                        src={`https://www.google.com/search?q=%${this.state.recipe.source_url}&btnI=Im+Feeling+Lucky`}>
                                     </iframe>
                                 </div>
                             </div>
